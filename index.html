@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <audio autoplay loop controls>
+        <source src="assets/audio/hbd.mp3" type="audio/mpeg">
+    </audio>
+<div class="container">
+    <div class="content1" id='c1'>
+      <div class="content1-isi">
+        <p class='subtitle text-danger'>Happy~</p>
+        <p class='title-dec text-danger'>~Birthday~</p>
+        <p class='subtitle text-right'>~ Someone I silently Love</p>
+        <div class="d-flex justify-content-center mt-5">
+            <a href='#c2' class='btn btn-outline-danger' onclick="handleNextClick()">
+                Lanjut klik ini yaa!
+            </a>
+        </div>
+      </div>  
+    </div>
+
+    <div class="content2" id="c2" style="display: none;">
+      <div class="content2-isi">
+        <div class="row ">
+          <div class="col-md-6 px-5 py-3 imgher">
+              <img src="assets/img/irist.png" alt="" class='w-100' />
+          </div>
+          <div class="col-md-6 py-md-4 px-md-5 c2-content">
+              <h1 class='text-danger mb-5'>Selamat Ulang Tahun</h1>
+              <p>"Ahh udah masuk <span class="text-danger">19 February</span> yaa? Aku rasa hari ini adalah hari yang paling spesial, buat teh Inka, buat aku juga karna bisa inget dan ngerayain ultahnya teh Inka. Teh, semoga di usia yang baru ini, setiap langkahnya dipenuhi dengan kebahagiaan, dan setiap yang diharapkan tercapai. Jangan pernah berhenti mengejar impian, dan ingatlah kalo aku selalu ada di samping dan selalu jadi pendukung suksesnya teh Inka, hehe ヾ(＠⌒ー⌒＠)ノ"</p>
+              <p> "Selamat ulang tahun! Setiap tahun yang berlalu, kamu semakin menakjubkan. Semoga di usiamu yang baru ini, kamu terus menjalani hidup dengan semangat dan kegembiraan yang sama. Terima kasih karena telah menjadi bagian dari kisah hidupku yang indah. Semoga hari ini penuh dengan tawa, canda, dan kebahagiaan. Ayo rayakan dengan penuh semangat, dan siapkan dirimu untuk petualangan baru yang menunggumu!" (AI juga ikut ngucapin nii wkwk)</p>
+              <div class="pre-next d-flex justify-content-between mt-5">
+                  <a href="#c1" class='btn btn-outline-danger w-25' onclick="handlePreviousClick('c2')">
+                      Kembali
+                  </a>
+                  <a href="#c3" class='btn btn-outline-danger w-25' onclick="handleNextClicks()">
+                      Lanjut..
+                  </a>
+              </div>
+          </div>
+      </div>
+      </div>   
+    </div>
+
+    <div class="content3" id="c3" style="display: none;">
+      <div class="content3-isi">
+        <h5 class="text-center text-danger">Slide kedua dah dibaca habis ya??<br>Btw,..<br>Mau hadiah ultah dari aku gak?</h5>
+        <div class="y/n row my-5">
+            <div class="col-md-6 p-1 d-flex justify-content-center">
+                <a href="#mdlyes" class='btn btn-outline-danger' onclick="handleYesClick()">
+                    Yaa, mau bangett 😍
+                </a>
+            </div>
+            <div class="col-md-6 p-1 d-flex justify-content-center">
+                <a href="#mdlno" class='btn btn-outline-danger' onclick="handleNoClick()">
+                    Gapapa deh, gausah!
+                </a>
+            </div>
+        </div>
+        <a href="#c1" class='text-danger align-items-center' onclick="handlePreviousClick('c3')">
+            ⟨⟨⟨ Balik lagii
+        </a>
+      </div>
+        
+    </div>
+
+    <div class="modal1" style="display: none;"></div>
+    <div class="modal2" style="display: none;"></div>
+</div>
+
+<!-- SweetAlert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+function handleNextClick() {
+    document.getElementById('c1').style.display = 'none';
+    document.getElementById('c2').style.display = 'block';
+    document.getElementById('c3').style.display = 'none';
+    document.getElementsByClassName('modal1')[0].style.display = 'none';
+    document.getElementsByClassName('modal2')[0].style.display = 'none';
+}
+
+function handleNextClicks() {
+    document.getElementById('c1').style.display = 'none';
+    document.getElementById('c2').style.display = 'none';
+    document.getElementById('c3').style.display = 'block';
+    document.getElementsByClassName('modal1')[0].style.display = 'none';
+    document.getElementsByClassName('modal2')[0].style.display = 'none';
+}
+
+function handlePreviousClick(content) {
+    if (content === 'c2') {
+        document.getElementById('c1').style.display = 'block';
+        document.getElementById('c2').style.display = 'none';
+        document.getElementById('c3').style.display = 'none';
+        document.getElementsByClassName('modal1')[0].style.display = 'none';
+        document.getElementsByClassName('modal2')[0].style.display = 'none';
+    } else if (content === 'c3') {
+        document.getElementById('c1').style.display = 'none';
+        document.getElementById('c2').style.display = 'block';
+        document.getElementById('c3').style.display = 'none';
+        document.getElementsByClassName('modal1')[0].style.display = 'none';
+        document.getElementsByClassName('modal2')[0].style.display = 'none';
+    }
+}
+
+function handleYesClick() {
+    swal('Okayy, hadiahnya segera diantar, \n sabar tungguin yaa! (. ❛ ᴗ ❛.) ', {
+        icon: 'success',
+        buttons: false,
+        timer: 3500,
+        content: {
+            element: "div",
+            attributes: {
+                style: "text-align: center; align-items: center;"
+            }
+        }
+    });
+}
+
+function handleNoClick() {
+    swal('Ga boleh ngga, harus mau!!! ผ(•̀_•́ผ)', {
+        icon: 'error',
+        buttons: false,
+        timer: 2500,
+    });
+}
+</script>
+
+</body>
+</html>

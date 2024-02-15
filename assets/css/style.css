@@ -1,0 +1,91 @@
+body {
+  font-family: 'Parisienne', cursive;
+  background-image: url("../img/bd.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+audio {
+  display: none;
+}
+
+
+.c2-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.content1 {
+  padding: 10px;
+  background-color: rgba(255, 233, 233, 0.74);
+  box-shadow: 0 0 10px rgba(255, 112, 112, 0.568);
+  border-radius: 8px;
+}
+
+.content1-isi {
+  padding: 40px;
+  border-left: 2px double rgb(255, 181, 181);
+  border-bottom: 2px double rgb(255, 181, 181);
+  border-radius: 8px;
+}
+
+.content2 {
+  padding: 10px;
+  background-color: rgb(255, 233, 233, 0.74);
+  box-shadow: 0 0 10px rgba(255, 112, 112, 0.568);
+  border-radius: 8px;
+}
+
+.imgher{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content2-isi {
+  padding: 40px;
+  border-left: 2px double rgb(255, 181, 181);
+  border-bottom: 2px double rgb(255, 181, 181);
+  border-radius: 8px;
+}
+
+.content3 {
+  padding: 10px;
+  background-color: rgb(255, 233, 233, 0.74);
+  box-shadow: 0 0 10px rgba(255, 112, 112, 0.568);
+  border-radius: 8px;
+}
+
+.content3-isi {
+  padding: 40px;
+  border-left: 2px double rgb(255, 181, 181);
+  border-bottom: 2px double rgb(255, 181, 181);
+  border-radius: 8px;
+}
+
+.title-dec{
+  font-size: 60px;
+  margin: 0 auto;
+}
+.subtitle{
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .content1, .content3 {
+    margin:0 30%; /* Margin hanya untuk layar desktop */
+  }
+
+}
